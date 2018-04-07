@@ -1,3 +1,4 @@
+import { PostsMocks } from './posts.mocks';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  posts = PostsMocks;
+
+  eliminarJson(evento) {
+    evento.path[1].style.display = 'none';
+  }
+
+
 }
